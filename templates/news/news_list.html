@@ -1,0 +1,19 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+    <title>my lovely web-site</title>
+    {% endblock title %}
+</head>
+<body>
+{% block content %}
+    <h1>Barcha yangiliklaar</h1>
+    {% for new in news %}
+        <li>{{ new.title }}</li>
+    {% endfor %}
+
+{% endblock content %}
+</body>
+
+
+</html>
