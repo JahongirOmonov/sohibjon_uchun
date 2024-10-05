@@ -1,0 +1,51 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.so
+
+# Django
+*.log
+*.pot
+*.py[cod]
+*.sqlite3
+db.sqlite3
+/media
+/static
+
+# If you're using Django compressor or collectstatic
+/staticfiles/
+/compressor-output/
+
+# If you're using pipenv
+Pipfile.lock
+
+# If you're using virtualenvs
+venv/
+ENV/
+env/
+*.env
+
+# If you're using secrets
+secrets.json
+*.key
+*.pem
+
+# If you're using Docker
+docker-compose.yml
+docker-compose.override.yml
+*.dockerfile
+*.dockerenv
+.dockerignore
+
+# Editor and IDE files
+.vscode/
+.idea/
+*.swp
+
+# macOS
+.DS_Store
+
+# Coverage reports
+htmlcov/
