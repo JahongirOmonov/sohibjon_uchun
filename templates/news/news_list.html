@@ -1,15 +1,25 @@
+{% load static %}
+
 <html>
 <head>
     <meta charset="UTF-8">
     {% block title %}
-    <title>my lovely web-site</title>
+        <title>my lovely web-site</title>
     {% endblock title %}
+    <link rel="icon" href="{% static 'css/all.css' %}" type="image/x-icon">
 </head>
 <body>
 {% block content %}
     <h1>Barcha yangiliklaar</h1>
     {% for new in news %}
-        <li>{{ new.title }}</li>
+        {% if new.title == "Rokuro Sudzuki" %}
+            <li>
+                <span><a href="{% url 'rokuro' %}">Rokuro</a></span>
+                <span><a href="{% url 'sudzuki' %}">Sudzuki</a></span>
+            </li>
+        {% else %}
+            <li>{{ new.title }}</li>
+        {% endif %}
     {% endfor %}
 
 {% endblock content %}
@@ -17,3 +27,5 @@
 
 
 </html>
+
+{#<a href="{% url 'news_detail' new.id %}">{{ new.title }}</a>#}
