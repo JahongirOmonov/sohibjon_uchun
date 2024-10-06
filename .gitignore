@@ -11,8 +11,8 @@ __pycache__/
 *.py[cod]
 *.sqlite3
 db.sqlite3
-/media
-/static
+#/media   *
+#/static   *
 
 # If you're using Django compressor or collectstatic
 /staticfiles/
