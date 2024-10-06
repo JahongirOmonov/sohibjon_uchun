@@ -30,3 +30,12 @@ def rokuro(request):
 def sudzuki(request):
     return render(request, "news/sudzuki.html", {})
 
+def home_page(request):
+    news = News.published.all()
+    categories = Category.objects.all()
+
+    context = {'news': news, 'categories': categories}
+    return render(request, "news/index.html", context)
+
+def contact(request):
+    return render(request, "news/contact.html" )
